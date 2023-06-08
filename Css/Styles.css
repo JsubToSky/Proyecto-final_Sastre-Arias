@@ -1,0 +1,22 @@
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+}
+
+#divProducts{
+    width:100%;
+    height: 700px;
+}
+.card{
+    width:18rem;
+}
+
+#divCarrito{
+    width: 100%;
+}
+
+.inputNumber{
+    width: 3rem;
+    
+}
