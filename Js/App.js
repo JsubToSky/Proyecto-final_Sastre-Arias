@@ -1,4 +1,27 @@
-const botonQuitar = document.getElementsByClassName('btn-quitar');
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+/* const botonQuitar = document.getElementsByClassName('btn-quitar');
 
 for(let i=0;i<botonQuitar.length;i++){
     let boton = botonQuitar[i];
@@ -26,5 +49,5 @@ function actualizarCarrito(){
         total = precio + cantidad;
     }
     total = Math.round(total);
-    document.getElementsByClassName('total-carrito')[0].innerText = '$' + total;
+    document.getElementsByClassName('total-carrito')[0].innerText = '$' + total; */
 }
