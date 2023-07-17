@@ -1,5 +1,7 @@
 const contenedorCelulares = document.querySelector('#contenedor-celulares');
+const contenedorLibros = document.querySelector('#contenedor-libros');
 const agregarAlCarritoBtns = document.getElementsByClassName('btn-agregar');
+const btnQuitar = document.getElementsByClassName('btn-quitar');
 
 
 
@@ -48,5 +50,32 @@ const carritoCompras = [];
 function agregarAlCarrito(idProducto){
     let productoEncontrado = arrayCelulares.find(prod => prod.id);
     carritoCompras.push(productoEncontrado);
-    console.log(carritoCompras);
+    /* const cartElem = document.createElement();
+cartElem.setAttribute(); */
 }
+ 
+
+
+fetch('https://openlibrary.org/works/OL45804W/editions.json')
+.then(response => {
+    return response.json();
+})
+.then(data => {
+    data.forEach(elem => {
+            const cardLibro = document.createElement('div');
+            cardLibro.setAttribute('class', 'card');
+            cardLibro.innerHTML = `     
+                                    <div class="card-body">
+                                      <h5 class="card-title">Libro ${elem?.full-title}</h5>
+                                      <h6 class="card-text">Un libro muy interesnate</h6>
+                                      <p>Autor del libro: ${elem?.pagination}</p>
+                                      <a href="#" class="btn btn-primary btn-agregar">Agregar al carro</a>
+                                    </div>
+                                    `;
+            contenedorLibros.appendChild(cardLibro);
+        
+    });
+})
+
+
+

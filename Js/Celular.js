@@ -1,4 +1,4 @@
-class Celulares{
+class Celular{
     id;
     precio;
     marca;
